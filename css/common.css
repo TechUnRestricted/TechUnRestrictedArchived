@@ -10,7 +10,8 @@
 
 body {
     background-color: whitesmoke;
-    margin: 0px;
+    margin: auto;
+    max-width: 1920px;
 }
 
 header {
@@ -36,6 +37,11 @@ lockedNavbar {
     column-gap: 10px;
     margin-top: 10px;
     margin-left: 10px;
+    /*position: fixed;
+    top: 0px;
+    background-color: #ff8383da;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);*/
 }
 
 navItem {
@@ -83,12 +89,13 @@ headerContent {
     font-size: 28px;
 }
 
-cardHolder{
+cardHolder {
     display: grid;
     gap: 45px;
     width: 100%;
 }
-card{
+
+card {
     background: white;
     box-shadow: 5px 5px 64px 6px rgba(0, 0, 0, 0.27);
     border-radius: 40px;
@@ -100,34 +107,38 @@ card{
 card img {
     width: 160px;
     -webkit-user-drag: none;
+    
 }
 
-cardSafePadding{
+cardSafePadding {
     display: grid;
     align-items: center;
     gap: 30px;
     margin: 30px;
 }
-.image-right{
+
+.image-right {
     grid-template-columns: 1fr 160px;
 
 }
 
-.image-left{
+.image-left {
     grid-template-columns: 160px 1fr;
 }
 
 cardGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* see notes below */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* see notes below */
     gap: 30px;
-    
-}
-.projectCard{
-    display: table;
 
 }
-cardGrid card{
+
+.projectCard {
+    display: table;
+}
+
+cardGrid card {
     background-color: darkolivegreen;
     height: 240px;
     grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
@@ -136,3 +147,45 @@ cardGrid card{
     box-sizing: border-box;
     padding: 30px;
 }
+
+contacts{
+    background-color: #7E8EDA;
+    width: 100%;
+    display: table;
+    height: 300px;
+    margin-top: 200px;
+    color: whitesmoke;
+    padding: 40px;
+    box-sizing: border-box;
+
+}
+socialIcons{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(44px, 1fr));
+    padding: 10px;
+    gap: 10px;
+}
+socialIcons img{
+    width: 44px;
+    height: 44px;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 50%;
+    box-sizing: border-box;
+    
+}
+@media (max-width:600px) {
+
+    .image-right, .image-left {
+        grid-template-columns: auto;
+        place-items: center;
+    }
+    card{
+        width: 90%;
+    }
+    #Rectangle{
+        d: path('M1679.5,0.5 L1679.5,819.204193 C1513.03996,739.163457 1233.21053,699.124631 840,699.124631 C446.78946,699.124631 166.960029,739.163459 0.499996443,819.204197 L0.499996443,819.204197 L0.5,0.5 L1679.5,0.5 Z') !important;
+    }
+}
+
+  

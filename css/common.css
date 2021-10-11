@@ -149,7 +149,7 @@ cardGrid {
     display: table;
 }
 
-cardGrid card {
+cardGrid a {
     background-color: darkolivegreen;
     height: 240px;
     grid-gap: 20px;
@@ -163,10 +163,12 @@ cardGrid card {
     perspective: 1000;
     transform: translateZ(0);
     backface-visibility: hidden;
+    border-radius: 40px;
+    text-decoration:none;
     user-select: none;
-    cursor: not-allowed;
 }
-cardGrid card:hover{
+
+cardGrid a:hover{
     transform: scale(1.03);
 }
 contacts {
@@ -196,6 +198,10 @@ socialIcons img {
     border-radius: 50%;
     box-sizing: border-box;
 
+}
+infoCardText{
+    display: inline-grid;
+    gap: 20px;
 }
 
 @media (max-width:600px) {
